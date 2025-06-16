@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+
+    transition: 2s;
+
+}
+.pic
+{
+width:20%;
+box-shadow: 10px 10px 10px rgb(225, 162, 162);
+transition: 0.50s;
+
+}
+#toolbar{
+width: 100%;
+padding: 20px;
+background: rgb(238, 164, 164);
+box-shadow: 10px 10px 10px gray;
+border-radius: 20px;
+margin-bottom: 300px;
+position: fixed;
+top:0%;
+
+
+}
+#slider1{
+  width:20%;
+  margin-left:30px;
+}
+#mycolor{
+
+width: 5%;
+}
+#myp{
+
+    margin-top: 100px;
+    text-align: justify;
+    padding: 20px;
+    transition: 2s;
+}
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+    <h1>Working with Event in javascript</h1>
+    <div id="toolbar">
+        <input id="mycolor" type="color">
+   <input id="slider1" type="range" max="50" min="15" value="15">
+ </div>
+ <div style="text-align: center; padding: 10px; border: opx black solid;
+ height: 200px;width: 80%; margin: auto; ">
+<image id="mypic" class="pic" src="images/p4.jpg"> 
+<div>
+<input id=" slider" type="range" max="58" min="20" value="10">
+</div>
+
+
+
+
+</div>
+<p id="myp">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+       specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was popularised in
+         the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+         , and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+<script>
+var c = document.getElementById("mycolor")
+var s = document.getElementById("slider")
+var s1 = document.getElementById("slider1")
+var p = document.getElementById("mypic")
+var myp = document.getElementById("myp")
+
+s1.onchange = function()
+{
+
+    myp.style.fontSize = s1.value+"px"
+}
+
+s.onchange = function()
+{
+p.style.width = this.value+"%"
+
+document.title = this.value
+
+}
+
+// alert(c.id)
+c.onchange = function()
+{
+
+    document.body.style.background = this.value
+}
+
+
+document.title="error"
+
+
+
+</script>
+
+</body>
+</html>
