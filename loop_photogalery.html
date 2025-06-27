@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    header
+{
+background:black;
+color:white;
+padding:30px;
+text-align:center;
+font-size:60px;
+width:40%;
+margin:auto;
+box-shadow:10px 10px 30px rgb(191, 11, 11);
+transition:0.50s;
+cursor:pointer;
+font-family:Arial black;
+}
+header:hover
+{
+box-shadow:10px 10px 70px magenta;
+}
+html
+{
+animation:fadeout 4s;
+}
+
+
+
+
+.mypic{
+width: 300px;
+height: 50%;
+margin: 50px;
+box-shadow: 10px 10px 10px rgb(73, 236, 86);
+cursor: pointer;
+transition: 0.50s
+
+h1{
+
+
+
+}
+}
+body{
+background: rgb(76, 195, 234);
+t
+}
+
+
+
+
+
+
+
+</style>
+<body style="text-align: center;">
+<header>
+ LOOP WEB PHOTO SHOW
+
+</header>
+
+ <script>
+var pic = new Array(8)
+
+for(var i = 0;i<8;i++)
+{
+pic[i] = document.createElement("img")
+pic[i].src=`images/p${i}.jpg`;
+pic[i].className="mypic";
+document.body.appendChild(pic[i])
+pic[i].onclick = function()
+{
+  this.style.transform="scale(1.50)"
+}
+pic[i].onmouseout = function()
+{
+  this.style.transform="scale(1)"
+}
+}
+
+document.title="ready"
+
+ </script>   
+</body>
+</html>

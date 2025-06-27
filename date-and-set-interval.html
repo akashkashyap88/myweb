@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Creting Digital Clock By Date and Set interval  </h1>
+</head>
+
+<style>
+#clock{
+padding: 10px;
+color: rgb(253, 251, 251);
+font-size: 30px;
+font-family: Arial black;
+background: black;
+width: 200px;
+text-align: center;
+box-shadow: 10px 10px 10px gray;
+margin: auto;
+cursor: pointer;
+
+}
+
+</style>
+<body>
+   <div id="clock">Clock</div> 
+<script>
+    var d
+    var t
+  var a = document.getElementById("clock")
+  var kya_clock_chal_raha_hai = "yes"
+  t = setInterval("show()",100)
+
+  function show()
+  {
+ d = new date()
+ a.innerHTML = d.toLocaleTimeString()
+ }
+a.onclick = function()
+{
+
+if(kya_clock_chal_raha_hai=="yes")
+ {clearInterval(t)
+    kya_clock_chal_raha_hai="no"
+alert("clock is stop now...")
+
+ }
+
+ else
+ {
+   t = setInterval("show()",1000)
+    kya_clock_chal_raha_hai="yes"
+    alert("clock is start now...")
+ }
+
+ document.title = kya_clock_chal_raha_hai
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

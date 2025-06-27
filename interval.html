@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   #add1{
+           width: 60%;
+           height: 300px;
+           box-sizing: 10px 10px 10px gray;
+           position: absolute;
+           top: 100px;
+           left: 100px;
+           display: none;
+
+
+   } 
+
+#b1{
+     font-size: 20px;
+     border: 1px black solid;
+     border-radius: 100px;
+     position: relative;
+     top: -350px;
+     left: 100%;
+     width: 30px;padding: 5px;
+     cursor: pointer;
+      
+}
+.pic{
+
+width: 100%;
+height: 300px;
+
+
+
+
+}
+
+
+
+
+
+
+
+</style>
+<body>
+    <div id="add1">
+<img class="pic" src="images/p3.jpg">
+<div id="b1" oneclick="myaction()">&#10040;</div>
+</div>
+<script>
+var a = document.getElementById("add1")
+function myaction()
+{
+  a.style.display ="none"
+
+}
+
+function dispadd1()
+{
+a.style.display ="block"
+a.style.top="100px"
+a.style.left="200px"
+}
+var t1 = setTimeout("dispadd1()",2000)
+var t2 = setTimeout("myaction()",10000)
+
+</script>
+
+    
+</body>
+</html>
