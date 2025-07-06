@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />"
+  <style>
+#box
+{
+width: 90%;
+background: rgb(255, 255, 255);
+margin: auto;
+color: red;
+font-size: 50px;
+font-family: arial black;
+padding: 10px;
+text-transform: uppercase;
+text-shadow: 4px 4px 10px gray;
+
+
+
+
+
+}
+
+
+
+
+
+  </style>
+<body>
+    <div id="box" class="animate__animated animate__zoomIn">
+        News in delhi
+    </div>
+    <script>
+    var News = ["Orange alert in Himachal Pradesh
+The IMD has issued an orange alert for heavy snow and rainfall across
+ various parts of Himachal Pradesh’s high and mid-hill regions on December
+ 27 and 28. Snowfall from December 23 has left 157 roads blocked across
+  the state. Tabo in the Lahaul and Spiti district reported the coldest
+   temperature at -10.6 degrees Celsius, while Una recorded the day’s
+    highest temperature of 23.6 degrees Celsius.
+
+Read more: Best destinations to celebrate your New Year's eve in India
+Snow and rain forecast for Uttarakhand
+Uttarakhand is expected to witness light to moderate rain and snowfall
+ in high-altitude areas on December 27 and 28. Key districts, including
+  Uttarkashi, Chamoli, Pithoragarh, Rudraprayag, and Bageshwar, "]
+
+    var b = document.getElementById("box")
+    c=0
+    var newscount = news.length
+    var i= 1
+    function shownews()
+    {
+if(i=1)
+{
+    i=0
+    b.className="animate__animated animate__zoomIn"
+}
+else{
+      b.className="animate__animated animate__rotateOut"
+i=1
+}
+   document.title = i
+b.innerHTML = news[c]
+if(c<newscount-1)
+{
+    c++
+}
+else{
+    c=0
+}
+
+    }
+setInterval("shownews(),1000")
+document.title="no error"
+
+    </script>
+</body>
+</html>
