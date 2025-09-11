@@ -1,184 +1,135 @@
-<!doctype html>
-<html>
-<head> <title> menu</title></head>
-<meta name="viewport"content="width=device-width,initial-scale=1.0"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style>
-header
-{
-width:60%;
-height:500px;
-background:black;
-text-align:center;
-margin:auto;
-box-shadow:10px 10px 10px grey;
+h1{
+    font-size: 40px;
+    text-align: center;
+    background:rgb(107, 225, 243);
+    color: white;box-shadow: 10px 10px 10px rgb(27, 20, 20);
 }
-header img
-{
-width:100%;
-height:100%;
+body{
+    background:#970707;
 }
-nav
-{
-width:40%;
-background:orange;
-text-align:left;
-margin-top:4px;
-cursor:pointer;
+#header,#non{
+    font-size: 40px;
+    background: rgb(84, 198, 84);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px gray;
 }
-nav ol
-{
-list-style:none;
-margin-left:-100px;
-}
-nav ol
-{
-nav ol li
-{
-display:inline;
-padding:20px;
-background:teal;
-margin-left:34px;
-box-shadow:10px 10px 10px grey;
-cursor:pointer;
-transition:1.50s;
-display:none;
-}
+#mystyle{
+color: white;
+padding: 20px;
+cursor: pointer;
 
-nav:hover ol li 
-{
 
-display:block;
 
 }
 
-nav ol li:hover a:visited
-{
-
-color :red;
-}
-nav ol li a:link
-{
-color:white:
-text-decoration:none;
-}
-nav ol li a:visited
-{
-color:white:
-}
-nav ol li:hover 
-{
-color :red;
-}
-/* extra small devices (phones,600px and down)*/
-@media only screen and (max-width:600px)
-body{background:blue;}
-nav{background:orange;}
-header
-{
-width:100px;
-height:200px;
-display:none;
-}
-header img
-{
-width:100%;
-height:100%;
-}
-nav ol li
-{
-//display:block;
-}
-
-}
-
-#menu
-{
-cursor:pointer;
-}
-
-
-/* small devices (portrait tablet and large phones,600px and up)*/
-@media only screen and (min-width:600px)
-{
-body{background:orange;}
-header 
-{
-width:99%;
-height:150px;
-}
-header img
-{
-width:100%;
-height:100%;
-}
-  nav ol li
-{
-display:block;
-}
-
-}
-
-@media only screen and (min-width:768px)
-{
-nav ol li
-{
-display:inline;
-}
-header
-{
-width:80%;
-height:450px;
-}
-
-}
 
 </style>
-<body>
-<header>
-<img src=" images/p1.jpeg">
-</header>
-<nav>
+<h1>Menu Of This Restourant</h1> 
+<body><div id="header">Vegitriean Food</div>
+ <div id="about">
+<p1 id="mystyle" id="p1"><h2>All Time Favourite	 </h2>
+<ul>.1 French Fries	         ..........106/-</ul>
+<ul>.2 Chilli Cheese Toast 	115/-</ul>
+<ul>.3 Chilli Cheese Gralic Toast 	115/-</ul>
+<ul>.4 Garlic Bread	98/-</ul>
+<ul>.5 Garlic Bread with Cheese	119/-</ul>
+ 	 
+<h2>Sandvich	  </h2>
+<ul>.1 Plain Sandwich	175/-</ul>
+<ul>.2 Grilled Sandwich	175/-</ul>
+<ul>.3 Club Sandwich	175/-</ul>
+ 	 
+<h2>Salads	  </h2>
+<ul>.1 Russian Salad / Maccroni	119/-</ul>
+ 	 
+<h2>Burgers </h2>	 
+<ul>.1 Veg. Burger	72/-</ul>
+ 	 
+<h2>Bakes & Meals (Served with 3Pcs. of Garlic Bread) </h2>
+<ul>.1 Maccroni Hotpot	205/-</ul>
+<ul>.2 Veg. Augratin	205/-</ul>
+ 	 
+<h2>Choice of Pasta's </h2>
+(Served with 3Pcs. of Garlic Bread)
+<ul>.1 Pasta Spicy Tomato / Classical Cheese	190/-</ul>
+<ul>.2 Pasta in Twin Sauce	190/-</ul>
+ 	 
+<h2>Pizza's </h2>	 
+<ul>.1 Plain Cheese Pizza	190/-</ul>
+<ul>.2 Capsicum, Onion Pizza	210/-</ul>
+<ul>.3 Tomato, Onion Pizza	210/-</ul>
+<ul>.4 Capsicum, Onion, Mashroom Pizza	250/-</ul>
+<ul>.5 Jain Spl. Pizza	250/-</ul>
+<ul>.6 Tandoori Pizza	250/-</ul>
+<ul>.7 Super Veggie Pizza(Double Cheese)	265/-</ul>
+ 	 
+<h2>Extra Toppings	 </h2> 
+<ul>.1 Cheese	55/-</ul>
+ 	 
+<h2>Hearth Stone Special </h2>	 
+<ul>.2 Lasanana Roll	133/-</ul>
+<ul>.3 Paneer Salsa Wrap	133/-</ul>
+<ul>.4 Lebenense Fala Fel	133/-</p>
 
-  <span id="menu">menu</span>
-<ol>
-<li><a href="#">home</a></li>
- <li><a href="#">practice page</a></li>  
-<li><a href="#">behance</a></li>
-<li><a href="#">my channel</a></li>
-<li><a href="#">my project</a></li>
-</ol>
-</nav>
-<div style ="height:300px">
-</div>
-<body>   
+<h1 id="non">Nonvegtrian Food</h1>
+<p2 id="mystyle" id="p2">
+        <ul>Punjabi Chicken Curry</ul>	
+        <ul>Chicken Madras</ul>
+        <ul>Chicken Korma	</ul>
+        <ul>Chili Chicken</ul>
+        <ul>Chicken Tikka Masala</ul>
+    	<ul>Beef Curry </ul>
+        <ul>Tandoori Chicken</ul>
+    	<ul>Lamb Masala</ul>
+        <ul>Chicken Vindaloo</ul></p2>
+
+
+    
+
+    </div>
+    <script>
+        $("p1").hide()
+        $(document).ready(function()
+    {
+        $("#header").click(function()
+    {
+        $("p1").toggle(600)
+    } )
+
+ 
 
 
 
 
+    
+        $("#non").click(function()
+    
+        
+    {
+        $("#p2").toggle(600)
+         $("#p1").slideUp(600)
+    }
+    
+    
+    )
+    })
 
-
-<body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
-
-
+    </script>
 
 </body>
-
-
 </html>
