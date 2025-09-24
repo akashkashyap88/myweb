@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    #pic{
+        width: 400px;
+        height: 60px;
+        box-shadow: 10px 10px 10px gray;
+        position: absolute;
+        top:10px;
+        opacity: 1;
+        left: 500px;
+
+    }
+     #logo{
+        width: 400px;
+        height: 60px;
+        box-shadow: 10px 10px 10px gray;
+        position: absolute;
+        top:400px;
+        opacity: 0;
+        left: 500px;
+
+    }
+    body{background-image:url(images/wa.gif) ;
+    background-size:90%;}
+</style>
+<body>()
+
+ 
+<img src="images/p1.jpg" id="pic">
+<img src="images/g1.jpg" id="logo">
+
+
+<script>
+    var s = document.createElement("audio")
+    s.src="a2.mp3"
+    document.body.appendChild(s)
+    s.play()
+$(document).ready(function()
+{
+    $("#pic").animate({left:"500px"},300).delay(1000).animate({top:"200px"}).delay(500).animate({height:+"250" , fontsize:+"70"}).delay(500).delay(100).animate({opacity:"0"},1000).delay(100).animate({opacity:"1"},1000)
+    $("#pic").animate({left:+"400"},1000).delay(500).animate({left:+"900px"},1000).delay(1000) 
+$("#pic").animate({left:+"-700px"},100)
+$("#pic").animate({opacity:"0",left:+"500"},0).animate({opacity:"1"},1000,showpic)
+}
+)
+function showpic()
+{
+    document.body.style.backgroundImage="url(images/a1.gif)"
+}
+//$(document).ready(function()
+//{
+//    $("#logo").animate({right:"500px"},300).delay(1000).animate({bottom:"200px"}).delay(500).animate({height:+"250" , fontsize:+"70"}).delay(500).delay(100).animate({opacity:"1"},1000)
+//}
+//)
+
+document.title = "ready"
+</script>
+
+
+
+   
+</body>
+</html>
