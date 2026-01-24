@@ -1,215 +1,294 @@
 <!doctype html>
-<html >
-<head> 
-<title>my profile </title>
+<html>
+<head> 
+<title>my profile</title>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
-</head>
-
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+ 
 <style>
-  nav
-{
-bakground:cyan; 
-width:50%;
-margin-left:50%;
-margin-top:5%;
-bacground:rgb(53, 69, 64);
-padding:20px;
-box-shadow:10px 10px 10px gray;
+/* ----------------------------------------------------------------- */
+/* 1. बेस और पार्टिकल CSS (सुधारित) */
+/* ----------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* लेआउट को सही रखने के लिए जोड़ा गया */
 }
-nav a:link
-{
-color:white;
-text-decoration:none;
-padding:20px;
-transition:0.50s;
-}
-nav a:visited
-{
-color:rgb(255, 255, 255);
-}
-nav a :hover
-{
-text-decoration:underline;
-color:yellow;
- background::
-
-}
-  #nam{
-
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* क्षैतिज स्क्रॉल बार हटाता है */
+    background-color: #0d1a2b; /* फॉलबैक रंग */
     
-    color: rgb(246, 148, 148);
+}
+
+/* #particles-js को फुल-स्क्रीन फिक्स्ड बैकग्राउंड के रूप में सेट करें */
+#particles-js {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* आपके द्वारा दिया गया Firefly/Stars ग्रेडिएंट और रंग */
+    background-color: #2b3a55; 
+    background-image: linear-gradient(135deg, #2b3a55 0%, #0d1a2b 100%);
+    z-index: -1; /* कंटेंट के पीछे रहे */
+}
+
+/* कंटेंट कंटेनर */
+.content {
+    position: relative; 
+    z-index: 2; 
+    color: #fff;
+    /* content को थोड़ा नीचे लाने के लिए */
+    padding-bottom: 200px; /* फुटर के ऊपर स्पेस */
+}
+
+/* ----------------------------------------------------------------- */
+/* 2. हेडर और नेविगेशन CSS */
+/* ----------------------------------------------------------------- */
+nav {
+    background:rgba(53, 69, 64, 0.8); /* पारदर्शी पृष्ठभूमि */
+    width: 50%;
+    margin-left: auto; /* right align के लिए */
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+}
+nav a:link, nav a:visited {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+    display: inline-block;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: yellow;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+#nam {
+    padding-left: 100px;
+    color: rgb(255, 255, 255);
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-body{
- background:url(images/p1.gif)
-}
-.pic{
-height: 500px;
-margin-top: 5%;
-width: 30%;
-margin-left: -200px;
-float: right;
-padding-left: 200px;
-}
-#ead{
-  background: black;
-}
-
-
-
-#about
-{
- margin-top: 100px;
-  background: black;
-  margin-left: 200px;
-width: 70%;
-height: 400px;
-
-}
-
-#font{
-font-size: 20px;
-
-background: black;
-color: aliceblue;
-
-
-}
-
-
-
-
-
- .footer{
-    background: rgb(249, 245, 245);
-    height: 250px;
-    width: 95%;
-    padding-top:100px;
-    margin-top: 300px;
-    color: rgb(16, 9, 9);
-    box-shadow: 10px 10px 10px gray;
-     background:url(images/p1.gif)
-   }
-footer a:visited
-{
-color:rgb(255, 255, 255);
-padding-bottom: -50%;
-}
-   #rtv{
+    margin-top: 50px;
     text-align: left;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding:-4%;
-   
-   }
-   
-   
-   
-   *{
-margin:0;
-padding:0;
 }
-#main 
-{
-font-size: 30px;
-width:40;
-margin:auto;
-text-align:center;
-margin-top:center;
-padding:20pcx;
-    color: rgb(255, 255, 255);
+.pic {
+    height: 400px;
+    margin-top: 50px;
+    width: 30%;
+    float: right;
+    padding-right: 50px;
 }
-table
-{
-width:100;
-margin-left:70%;
-padding:20px;
 
+/* ----------------------------------------------------------------- */
+/* 3. अबाउट सेक्शन CSS */
+/* ----------------------------------------------------------------- */
+#about {
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.7); /* पारदर्शी पृष्ठभूमि */
+    margin-left: 50px;
+    width: 60%; /* समायोजित किया गया */
+    height: auto; /* फिक्स्ड हाइट हटाई */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+#about h2 {
+    margin-bottom: 15px;
+}
+#font {
+    font-size: 18px;
+    color: aliceblue;
+    line-height: 1.6;
+}
 
-
-margin-top:-15%;
-} 
-
+/* ----------------------------------------------------------------- */
+/* 4. FOOTER CSS (Flexbox के साथ सुधारित) */
+/* ----------------------------------------------------------------- */
+.footer {
+    width: 100%; /* फुल चौड़ाई */
+    padding: 30px 20px;
+    color: white;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #000000 0%, #333333 100%);
+    
+    /* Flexbox Layout */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    position: relative; 
+    z-index: 2; 
+    margin-top: 50px; /* content के नीचे आने के लिए मार्जिन */
+}
+.footer-column {
+    padding: 10px;
+    min-width: 250px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.footer-column ul img {
+    margin-right: 10px;
+}
+.footer a:link, .footer a:visited {
+    color: #ffcc66; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer h4, .footer h3 {
+    margin-bottom: 15px;
+    color: white;
+}
+#main table {
+    margin-left: 0;
+    width: auto;
+}
+.wrap { font-family: sans-serif; font-size: 3em; }
+        .typed-cursor { opacity: 1; animation: typedjsBlink 0.7s infinite; }
+        @keyframes typedjsBlink { 50% { opacity: 0.0; } }
 </style>
+</head>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<body>
+    <div id="particles-js"></div> 
+    
+    <div class="content">
+<div class="wrap">
+    
+
+        <nav>
+            <a href="index.html">home</a>
+            <a href="first.html">first</a>
+            <a href="practice.html"> practice</a>
+            <a href="https://www.youtube.com/account">my channel</a>
+            <a href="https//https;//www.google.com/">google search</a>
+            <a href="photogalaery.html">my project</a>
+        </nav>
+        
+        <h1 id="nam">Aman Kashyap</h1>    i am a <span id="typed"></span> 
+    </div>
+        <img class="pic" src="images/ak1.jpg.png" alt="Profile Picture">
+
+        <div id="about"> 
+            <h2 style="color: aliceblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">About me</h2>
+            <p id="font">
+                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <br><br>
+                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p> 
+        </div>
+
+    </div>
+    
+
+    
+    
+       
 
 
-<body><nav>
-    <a href="index.html">home</a>
-    <a href="first.html">first</a>
-     <a href="practice.html"> practice</a>
-       <a href="https://www.youtube.com/account">my channel</a>
- <a href="https//https;//www.google.com/">google search</a>
- <a href="photogalaery.html">my project</a>
+    <footer class="footer">
+        
+        <div class="footer-column">
+            <h4>Copyright@2025 vikshitbharat</h4>
+            <h3>Contact us</h3>
+            <ul>
+                <li><img src="images/c1.png" alt="Contact Icon" width="25" height="25"><a href="https://www.youtube.com/account">Contact</a></li>
+                <li><img src="images/c2 (2).png" alt="Whatsapp Icon" width="25" height="25"><a href="#">Whatsapp: 98111...</a></li>
+                <li><img src="images/c3.png" alt="Location Icon" width="25" height="25"><a href="#">Location</a></li>
+            </ul>
+        </div>
 
-</nav>
-      
+        <div class="footer-column" id="main">
+            <table border="0" cellpadding="10">
+                <caption style="font-size:24px; color: white; margin-bottom: 10px;">Login form</caption>
+                <form action="http://tataplay/user/get.php" method="get">
+                    <tr>
+                        <td><label for="userid">User ID:</label></td>
+                        <td><input id="userid" type="text" placeholder="type login id... " required title="type login id"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input id="password" placeholder="type password... " type="password" title="type password here" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Login" style="padding: 5px 10px;"> <input type="reset" style="padding: 5px 10px;"></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="photogalaery.html">Projects</a></li>
+            </ul>
+        </div>
 
-  
+    </footer>
 
-  <img class ="pic" src="images/ak1.jpg.png">
-
-<h1 id ="nam"> AMAN KASHYAP</h1>
-
-
-
-  <div id="about"> <h2 style="color: aliceblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">About me</h2>
-<p id="font">
-   What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to ma
-ke a type specimen book. It has survived not only five centuries, but also the
- leap into electronic typesetting, remaining essentially unchanged. It was popul
-arised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
- passages, and more recently with desktop publishing software like Aldus PageMake
-r including versions of Lorem Ipsum.
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 
-1500s, when an unknown printer took a galley of type and scrambled it to ma
-ke a type specimen book. It has survived not only five centuries, but also the
- leap into electronic typesetting, remaining essentially unchanged. It was popul
-arised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
- passages, and more recently with desktop publishing software like Aldus PageMake
-r including versions of Lorem Ipsum.</p> 
-
-</div>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffcc" }, /* हल्का पीला रंग */
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.8, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } }, 
+                "size": { "value": 10, "random": true, "anim": { "enable": true, "speed": 10, "size_min": 0.1, "sync": false } }, 
+                "line_linked": { "enable": false }, 
+                "move": { "enable": true, "speed": 2, "direction": "bottom", "random": true, "straight": false } 
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "bubble" }, 
+                    "onclick": { "enable": false },
+                    "resize": true
+                },
+                "modes": {
+                    "bubble": { "distance": 200, "size": 15, "duration": 2 }
+                }
+            },
+            "retina_detect": true
+        });
+    document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed', {
+                strings: [
+                    "Ui-Ux", 
+                    "Designer", 
+                    "Web Designer",
+                    "Graphic Designer"
+                ],
+                typeSpeed: 50,      // टाइपिंग की गति
+                backSpeed: 30,      // डिलीट करने की गति
+                loop: true,         // लूप में चलाएं
+                cursorChar: '|',    // कर्सर का चरित्र
+            });
+        });
+    </script>
 </body>
-<footer class="footer">
-    <ol id="rtv">
- <h4 style="font-size: 20px;">Copyright@2025 vikshitbharat</h4>
-<h3 style="text-align: center;">Contact us</h3>
-<ul><img src="images/c1.png" alt="कंपनी का लोगो" width="25" height="25" margin="50px"><a href="https://www.youtube.com/account"> contact</a></ul>
-
-<ul><img src="images/c2 (2).png"  width="25" height="25" margin="50px"><a href="https://www.youtube.com/account"> Whatsapp     98111</a></ul>
-<ul><img src="images/c3.png"  width="25" height="25" margin="50px"><a href="https://www.youtube.com/account"> Location</a></ul></ol>
-
-
-
-
-<div id ="main">
-<table border="0"  cellapadding="10">
-<caption style="font-size:30px;margin:20px;">Login form </caption>
-
-<form action="http://tataplay/user/get.php"method="get">
-
-<tr>
-<td><label for="userid">user id</label>              </td>
-<td><input id="type ="text" placeholder="type login id... "required title ="type
-login id"></td>
-</tr>
-<tr>
-<td><label for="password" >password   </td>
-  <td><input id="password"placeholder="type password... "type="password" title="type
-password here" required> </td>   
-
-  </tr>
-<tr>
-<td><input type="submit" value="Login"><input type="reset"></td>
-</tr></div></footer>
 </html>
