@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI Notes - Centered List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      background: linear-gradient(-45deg, #1b1923, #310d1b, #0c0393, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding-top: 400px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      text-align: center; /* Heading aur content center karne ke liye */
+    }
+
+    /* List aur Counting dono ko center karne ki trick */
+    ol {
+      list-style-position: inside; 
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    h1 {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #00f2ff; /* Neon touch */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-container" style="width: 90%; height: 1500px;" >
+    <h1>UI Notes</h1>
+    
+    <h2>Types of User Interface</h2>
+    <p>Command language-based interface</p>
+
+    <ol> 
+      <li>Menu-based UI</li>
+      <li>Natural language UI</li>
+      <li>Touch sensitive UI</li>
+      <li>Voice controlled UI</li>
+      <li>Web-based interface (UI)</li>
+    </ol>
+
+    <h2 class="mt-4">* Graphic User Interface</h2>
+<img src="images/c3.jpg" class="img-fluid" style="width: 90%; height: 600px; border-radius: 50px;">
+
+<div class="container-fluid mt-5">
+The most widely used type of UI in use today is the Graphic User Interface
+(GUI). It accepts input through the keyboard, mouse and display the output on
+the user’s computer screens.
+The action in a GUI usually performed through direct manipulation of the
+graphical elements.
+<P>The most common elements of a GUI include:</P><ol>
+<li> Window</li>
+ <li>Icon</li>
+ <li>Menu</li>
+ <li>Cursor pointer</li></ol>
+*<h3>Process of User Interface Design*</h3>
+<ol><li> Interface analysis.</li>
+<li> Interface design.</li>
+<li> Interface construction.</li>
+<li> Interface implementation.</li>
+<li> Interface validation.</li></ol>
+**Interface Analysis**
+- This is like studying how things are laid out and work on a website or an
+app.
+- We look at what are these (like buttons, menus, text books)
+- Where they are placed, and how they function.
+- It’s a something like taking apart a toy to see how it’s made and how it
+works, but with website and apps instead.
+**Interface Design**
+- We decide how the interface will look and work based on what we
+learned during analysis.
+
+</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
