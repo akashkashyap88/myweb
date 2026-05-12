@@ -9,51 +9,47 @@
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
  
 <style>
-/* ----------------------------------------------------------------- */
-/* 1. बेस और पार्टिकल CSS (सुधारित) */
-/* ----------------------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* लेआउट को सही रखने के लिए जोड़ा गया */
+    box-sizing: border-box; 
 }
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    overflow-x: hidden; /* क्षैतिज स्क्रॉल बार हटाता है */
-    background-color: #0d1a2b; /* फॉलबैक रंग */
+    overflow-x: hidden; 
+    background-color: #0d1a2b; 
     
 }
 
-/* #particles-js को फुल-स्क्रीन फिक्स्ड बैकग्राउंड के रूप में सेट करें */
+
 #particles-js {
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* आपके द्वारा दिया गया Firefly/Stars ग्रेडिएंट और रंग */
+ 
     background-color: #2b3a55; 
     background-image: linear-gradient(135deg, #2b3a55 0%, #0d1a2b 100%);
-    z-index: -1; /* कंटेंट के पीछे रहे */
+    z-index: -1; 
 }
 
-/* कंटेंट कंटेनर */
+
 .content {
     position: relative; 
     z-index: 2; 
     color: #fff;
-    /* content को थोड़ा नीचे लाने के लिए */
-    padding-bottom: 200px; /* फुटर के ऊपर स्पेस */
+ 
+    padding-bottom: 200px; 
 }
 
-/* ----------------------------------------------------------------- */
-/* 2. हेडर और नेविगेशन CSS */
-/* ----------------------------------------------------------------- */
+
 nav {
-    background:rgba(53, 69, 64, 0.8); /* पारदर्शी पृष्ठभूमि */
+    background:rgba(53, 69, 64, 0.8); 
     width: 50%;
-    margin-left: auto; /* right align के लिए */
+    margin-left: auto; 
     margin-right: 20px;
     margin-top: 20px;
     padding: 15px;
@@ -91,15 +87,13 @@ nav a:hover {
     padding-right: 50px;
 }
 
-/* ----------------------------------------------------------------- */
-/* 3. अबाउट सेक्शन CSS */
-/* ----------------------------------------------------------------- */
+
 #about {
     margin-top: 50px;
-    background: rgba(0, 0, 0, 0.7); /* पारदर्शी पृष्ठभूमि */
+    background: rgba(0, 0, 0, 0.7);
     margin-left: 50px;
-    width: 60%; /* समायोजित किया गया */
-    height: auto; /* फिक्स्ड हाइट हटाई */
+    width: 60%; 
+    height: auto; 
     padding: 20px;
     border-radius: 10px;
     text-align: left;
@@ -114,23 +108,20 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* ----------------------------------------------------------------- */
-/* 4. FOOTER CSS (Flexbox के साथ सुधारित) */
-/* ----------------------------------------------------------------- */
 .footer {
-    width: 100%; /* फुल चौड़ाई */
+    width: 100%; 
     padding: 30px 20px;
     color: white;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(to right, #000000 0%, #333333 100%);
     
-    /* Flexbox Layout */
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; 
     position: relative; 
     z-index: 2; 
-    margin-top: 50px; /* content के नीचे आने के लिए मार्जिन */
+    margin-top: 50px; 
 }
 .footer-column {
     padding: 10px;
@@ -168,6 +159,49 @@ nav a:hover {
 .wrap { font-family: sans-serif; font-size: 3em; }
         .typed-cursor { opacity: 1; animation: typedjsBlink 0.7s infinite; }
         @keyframes typedjsBlink { 50% { opacity: 0.0; } }
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.card{
+    background: #0b1d76;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(238, 238, 238);
+    transition: transform 0.3, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;      
+  height: 100%;     
+  object-fit: cover; 
+}
+ol{
+    margin-left: 600px;
+    font-size: 100px;
+    color: aliceblue;
+}
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: right;
+}
+
+.logo img {
+  
+    width: 100px;
+    height: 100px;
+    
+    
+    object-fit: contain; 
+    
+    border: 2px solid #eee; /* Optional: halka border */
+    padding: 10px;          /* Optional: logo ke andar space */
+}
 </style>
 </head>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -183,7 +217,7 @@ nav a:hover {
             <a href="first.html">first</a>
             <a href="practice.html"> practice</a>
             <a href="https://www.youtube.com/account">my channel</a>
-            <a href="index2.html">UI-UX NOTES</a>
+            <a href="https//https;//www.google.com/">google search</a>
             <a href="photogalaery.html">my project</a>
         </nav>
         
@@ -202,12 +236,71 @@ nav a:hover {
 
     </div>
     
+<h1 style="text-align: center; color: aliceblue; font-size: 50px;">My Website</h1>
+ <section id="projects">
+<h2>projects</h2>
+<div class="projects">
+<div class="card">
+<a href="https://akashkashyap88.github.io/myweb2/" alt="project1"><img src="images/q1.jpg"><h3> welcome my websitee </h3> </a>
 
-    
-    
-       
+
+</div>
+
+<div class="card">
+<a href="https://akashkashyap88.github.io/myweb3/"><img src="images/q2.jpg"> welcome my websitee  </a>
 
 
+</div>
+
+<div class="card">
+<a href=" https://akashkashyap88.github.io/my-repsitry/"><img src="images/q3.jpg" alt="Project Image"> <h2>Nature Project</h2> </a>
+
+
+</div>
+<div class="card">
+<a href="https://akashkashyap88.github.io/myweb2/"><img src="images/l1.jpg"> welcome my websitee  </a>
+
+
+</div>
+
+</div>
+
+
+
+
+ </section>   
+   
+ <h1 style="color: aliceblue; margin-left: 100px; margin-top: 100px; font-size: 100px;">Containts</h1>
+  <ol><li>UI-Ux</li>
+    <li>Branding</li>
+    <li>illustration</li>
+    <li>Packging</li>
+<li>Book Design</li></ol>     
+
+<h1 style="color: aliceblue; margin-left: 1000px; padding: 100px; font-size: 50px;">SOFTWARE</h1>
+<div class="logo">
+
+    <img src="images/pho.png" alt="Adobe Photoshop Logo" width="100" height="100">
+
+
+  <img src="images/ill.png" alt="Adobe Photoshop Logo" width="100" height="100">
+
+
+
+  <img src="images/figma.png" alt="Adobe Photoshop Logo" width="100" height="100">
+
+
+
+  <img src="images/anim.png" alt="Adobe Photoshop Logo" width="100" height="100">
+
+
+
+  <img src="images/ind.png" alt="Adobe Photoshop Logo" width="100" height="100">
+
+
+
+
+</div>
     <footer class="footer">
         
         <div class="footer-column">
@@ -255,7 +348,7 @@ nav a:hover {
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ffffcc" }, /* हल्का पीला रंग */
+                "color": { "value": "#ffffcc" }, 
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.8, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } }, 
                 "size": { "value": 10, "random": true, "anim": { "enable": true, "speed": 10, "size_min": 0.1, "sync": false } }, 
@@ -283,13 +376,12 @@ nav a:hover {
                     "Web Designer",
                     "Graphic Designer"
                 ],
-                typeSpeed: 50,      // टाइपिंग की गति
-                backSpeed: 30,      // डिलीट करने की गति
-                loop: true,         // लूप में चलाएं
-                cursorChar: '|',    // कर्सर का चरित्र
+                typeSpeed: 50,    
+                backSpeed: 30,      
+                loop: true,       
+                cursorChar: '|',   
             });
         });
     </script>
 </body>
 </html>
-
